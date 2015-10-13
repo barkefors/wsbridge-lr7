@@ -2,9 +2,12 @@
 <h1>Websocket Example</h2>
 
 <div>
-    <input id="${namespace}message">
+    <input class="form-control" id="${namespace}message" placeholder="Message...">
 </div>
-<textarea id="${namespace}output"></textarea>
+<div>
+    <label>Output</label>
+    <pre id="${namespace}output"></pre>
+</div>
 
 <script>
 
@@ -16,7 +19,7 @@ const input = document.querySelector('#${namespace}message');
 
 ws.onmessage = event => {
     const text = event.data + '\n';
-    output.value += text;
+    output.textContent += text;
 };
 
 ws.onclose = event => {
