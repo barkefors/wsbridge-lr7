@@ -12,3 +12,7 @@ dependencies {
     providedCompile 'com.liferay:com.liferay.registry.api:1.0.0-SNAPSHOT'
     providedCompile 'javax.websocket:javax.websocket-api:1.1'
 }
+
+war {
+    archiveName = 'wsbridge.war'
+}
